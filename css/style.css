@@ -1,0 +1,805 @@
+:root{
+    --primary-color: #C62D2C;
+    --secondary-color: #962120;
+    --light-grey: #faf0e6;
+    --dark-grey: #ffdab9;
+}
+body{
+    font-family: 'Cabin', Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000000;
+}
+/* general class css */
+p{
+    font-size: 16px;
+    line-height: 22px;  
+}
+.paragraph{
+    padding: 20px 0;    
+    margin: 0 auto;
+    width: 100%;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.underline{
+    text-decoration: underline;
+}
+.bigColumn80{
+    width: 80%;
+    margin: 0 auto;
+}
+.fw500{
+    font-weight: 500;
+}
+.fw700{
+    font-weight: 700;
+}
+.tac{
+    text-align: center;
+}
+.btn{
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 14px 30px;
+    font-size: 14px;
+}
+.btn:hover{
+    background-color: var(--secondary-color);
+}
+.whiteText{
+    color: #ffffff;
+}
+.blackText{
+    color: black;
+}
+.redBg{
+    background-color: var(--primary-color);
+}
+.onlyDesktop{
+    display: none;
+}
+.photoFont{
+    font-family:'photograph_signatureregular', Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+.fs64{
+    font-size: 64px;
+}
+hr{
+    width: 40px;
+    border: 1px solid var(--primary-color);
+    margin: 0 auto;
+}
+/* first div css just for Desktop */
+.addressTopForDesktop p{
+    padding: 12px;
+    font-size: 13px;
+}
+/* hamburger */
+header input{
+    display: block;
+    width: 33px;
+    height: 22px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+}
+.hamburgerBtn span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+}
+.hamburgerBtn{
+    padding: 20px;
+    position: fixed;
+    z-index: 1000;
+    right: 30px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: var(--primary-color);
+}
+.hamburgerBtn span:first-child{
+  transform-origin: 0% 0%;
+}
+.hamburgerBtn span:nth-last-child(1){
+  transform-origin: 0% 100%;
+}
+.hamburgerBtn input:checked ~ span{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #ffffff;
+}
+.hamburgerBtn input:checked ~ span:nth-last-child(2){
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+.hamburgerBtn input:checked ~ span:nth-last-child(1){
+  transform: rotate(-45deg) translate(0, -1px);
+}
+nav>ul{
+    display: none;
+}
+.menuMobileDisplayed{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    z-index: 990;
+    background: rgb(198,45,44);
+    background: -moz-radial-gradient(circle, rgba(198,45,44,1) 50%, rgba(150,33,32,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(198,45,44,1) 50%, rgba(150,33,32,1) 100%);
+    background: radial-gradient(circle, rgba(198,45,44,1) 50%, rgba(150,33,32,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c62d2c",endColorstr="#962120",GradientType=1);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: opacity 0.8s ease-in, 
+                transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+               
+}
+.menuMobileDisplayed>li{
+    margin: 50px;
+    font-size: 1rem;
+    color: #ffffff;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-content p{
+    font-size: 13px;
+    margin: 10px 0;
+}
+.dropdown-content img{
+    margin-right: 5px;
+}
+.dropdown-content{
+    top: 20px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+.dropdown-content-closed{
+    display: none;
+}
+.dropdown-content-opened{
+    display: inline;
+}
+/* first section della Home */
+.firstBannerHome{
+    position: relative;
+    background-image: url("../img/img5.jpg");
+    height: 95vh; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 12px solid #ffffff;
+}
+.blackOverlay{
+    position: absolute;
+    background-color: #000000;
+    opacity: 0.20;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.containerTextBannerHome{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#anim{
+    width: 50%;
+}
+.firstBannerHomeTitle{
+    font-size: 39px;
+    opacity: 0;
+    -webkit-animation-duration: .4s;
+    animation-duration: .4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateX(20%);
+    }
+    100% {
+       opacity: 1;
+       -webkit-transform: translateX(0);
+    }
+ }
+ 
+ @keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       transform: translateX(20%);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+ 
+ .fadeInLeft {
+ -webkit-animation-name: fadeInLeft;
+ animation-name: fadeInLeft;
+ } 
+.firstBannerHomeTitle span{
+    color: var(--primary-color);
+    font-size: 80px;
+}
+.firstBannerHome ion-icon{
+    font-size: 3rem;
+    margin: 10px;
+}
+.firstBannerHome ion-icon:hover{
+    color: var(--primary-color);
+}
+.linkToTrip{
+    padding: 0 5px;
+    font-size: 13px;
+    border-radius: 5px;
+}
+.containerTextBannerHome .btn{
+    margin-top: 20px;
+}
+.firstBannerHomeIconsDiv{
+    opacity: 0;
+}
+.opacity1{
+    opacity: 1;
+}
+/* second section chi siamo della home */
+.bannerChiSiamoHome{
+    position: relative;
+    padding: 50px 0;
+    background-color: var(--light-grey);
+    border-bottom: 12px solid #ffffff;
+}
+.bannerChiSiamoHome svg{
+    display:block;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    top: -73px;
+}
+.bannerChiSiamoHome ion-icon{
+    display:block;
+    position: absolute;
+    left: 50%;
+    margin-left: -15px;
+    top: -50px;
+    z-index: 4;
+    color: var(--primary-color);
+    font-size: 30px;
+}
+.bannerChiSiamoHome h3{
+    margin-bottom: 20px;
+}
+.bannerChiSiamoHome h2{
+    color: var(--primary-color);
+    font-size: 80px;
+}
+.bannerChiSiamoHomeParagraph{
+    margin-bottom: 50px;
+}
+.imgBannerChiSiamoHome{
+    margin-top: 80px;
+}
+.imgBannerChiSiamoHome img{
+    border-radius: 5px;
+}
+
+/* third section menú della home */
+.bannerMenuHome{
+    position: relative;
+    z-index: 4;
+    border-bottom: 12px solid #ffffff;
+}
+.bannerMenuHomeTitle{
+    background-color: var(--dark-grey);
+    width: 100%;
+    padding-bottom: 20px;
+}
+.containerMainBannerMenuHome{
+    background-color: var(--light-grey);
+    padding: 10px 0 30px 0;
+}
+.menuHomeSectionButtonWrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menuHomeSectionButtonWrap>*{
+    margin: 10px 0;
+    width: inherit;
+}
+/* footer */
+footer hr{
+    width: 20px;
+    border: 1px solid #ffffff;
+    margin: 0 auto;
+}
+.upperPartFooter{
+    padding: 30px;
+    padding-bottom: 80px;
+}
+.upperPartFooter>p{
+    padding: 30px 0;
+}
+.lowerPartFooter{
+    background-color: var(--secondary-color);
+    padding: 30px;
+    position: relative;
+}
+.lowerPartFooter svg{
+    display:block;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    top: -70px;
+}
+.lowerPartFooter ion-icon{
+    display:block;
+    position: absolute;
+    left: 50%;
+    margin-left: -15px;
+    top: -30px;
+    z-index: 4;
+    color: #ffffff;
+    font-size: 30px;
+}
+footer .footerTitle{
+    padding-bottom: 0;
+    font-size: 22px;
+}
+footer .footerSubTitle{
+    padding-top: 0;
+}
+.lowerPartFooter p{
+    font-size: 13px;
+}
+.upperPartFooter ion-icon{
+    font-size: 3rem;
+    margin: 10px;
+    transform: scale(1);
+}
+.upperPartFooter ion-icon:hover{
+    transform: scale(1.1);
+}
+/* gallery specific CSS */
+.-fx-image-gal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; /* arbitrary valye */
+    margin: 0px auto;
+}
+  .-fx-gal-item {
+    margin: 5px;
+    overflow: hidden;
+    border-radius: 5px;
+} 
+  .-fx-gal-image-thumb img {
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    /* -webkit-filter: grayscale(80%);
+    -moz-filter: grayscale(80%);
+    filter: grayscale(80%); */
+    transition: all 0.3s ease;
+} 
+  .-fx-gal-image-thumb:hover img {
+    width: 100%;
+    cursor: pointer;
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    filter: grayscale(0%);
+  
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+}
+  .-fx-gal-image-thumb:focus + .-fx-gal-image-big {
+    display: block;
+}  
+  .-fx-gal-image-big {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(5, 10, 15, 0.8);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    z-index: 800;
+    transition: all 0.3s ease;
+} 
+  .-fx-gal-image-big img {
+    max-width: 90vw;
+    position: absolute;
+    box-shadow: 0px 0px 800px 40px rgba(0, 0, 0, 0.9);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/* about page */
+.firstBannerAbout, .firstBannerMenu, .firstBannerContact{
+    position: relative;
+    height: 50vh; 
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 12px solid #ffffff;
+}
+.firstBannerAbout{
+    background-image: url("../img/img1.png");
+}
+.pageTitle{
+    color: var(--primary-color);
+    font-size: 70px;
+    position: absolute;
+    width: 100%;
+    bottom: -10%;
+    text-align: center;
+    -webkit-animation-duration: .4s;
+    animation-duration: .4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.secondBannerAbout{
+    margin-top: 50px;
+    border-bottom: 12px solid #ffffff;
+}
+.innerSecondBannerAbout{
+    width: 80%;
+    margin: 0 auto;
+}
+.galleryAbout{
+    width: 80%;
+    margin: 0 auto;
+}
+.normalMargin{
+    margin-top: 0;
+}
+/* menu page */
+.firstBannerMenu{
+    background-image: url("../img/img3.png");
+}
+.secondBannerMenu{
+    margin: 0 auto;
+    margin-top: 50px;
+    border-bottom: 12px solid #ffffff;
+}
+.menuBtnsWrapper{
+    text-align: center;
+}
+.menuBtnsWrapper a{
+    margin: 20px 10px;
+}
+/* contact page */
+.firstBannerContact{
+    background-image: url("../img/img2.png");
+}
+
+
+
+
+/* prova */
+.menu {
+    display: none;
+}
+.menu--is-visible {
+    display: grid;
+}
+
+.item__header {
+    display: flex;
+    align-items: baseline;
+}
+.item__title {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 0;
+    color: var(--primary-color);
+}
+.item__header ion-icon{
+    padding: 5px;
+    border-radius: 100%;
+    background-color: rgb(57, 129, 57);
+    color: #ffffff;
+    margin-left: 5px;
+}
+.item__dots {
+    flex: 1;
+    border-bottom: 1px dashed var(--dark-grey);
+    margin: 0 15px;
+}
+.item__price {
+    font-size: 18px;
+    color: var(--primary-color);
+}
+.item__description {
+    margin-bottom: 40px;
+}
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+.button {
+    margin: 5px 15px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid var(--primary-color);
+}
+.highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background: var(--primary-color);
+    border-radius: 5px;
+    z-index: -1;
+    transition: 0.24s;
+}
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.button--is-active{
+    color: #ffffff;
+}
+/* modal */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 900; /* Sit on top */
+    padding-top: 150px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: var(--light-grey);
+    margin: auto;
+    padding: 0;
+    border: 12px solid #ffffff;
+    width: 50%;
+    height: 70vh;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: var(--dark-grey);
+    color: var(--primary-color);
+    height: 15%;
+  }
+  .modal-header h2{
+    font-size: 70px;
+  }
+  
+  .modal-body {
+      padding: 2px 16px;
+      height: 75%;
+    }
+  
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #ffffff;
+    color: #000000;
+    height: 10%;
+  }
+
+/* media query for Desktop */
+@media screen and (min-width: 960px){
+    .onlyDesktop{
+        display: inline;
+    }
+    header div.bigColumn80, .firstBannerHome div.bigColumn80{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .bannerChiSiamoHome div.bigColumn80{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .hamburgerBtn{
+        display: none;
+    }
+    #menu{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    }
+    #menu>li{
+        margin-left: 50px;
+    }
+    header{
+    z-index: 999;
+    position: absolute;
+    width: 100vw;
+    padding: 12px 0;
+    height: 65px;
+    transition: background-color .9s cubic-bezier(.165,.84,.44,1);
+    }
+    .firstBannerHome{
+    border: 12px solid #ffffff;
+    border-top: 0;
+    }
+    .firstBannerAbout{
+    border: 12px solid #ffffff;
+    border-top: 0;
+    }
+    #anim{
+        width: 30%;
+    }
+    .onlyMobile{
+        display: none;
+    }
+    #menu>li:hover{
+        border-bottom: 5px solid #ffffff;
+    }
+    #menu>li.dropdown:hover{
+        border-bottom: none;
+    }
+    .active{
+        border-bottom: 5px solid #ffffff;
+    }
+    .activeBlack{
+        border-bottom: 5px solid #ffdab9;
+    }
+    .bannerChiSiamoHome{
+        border: 12px solid #ffffff;
+        border-top: 0;
+    }
+    .bannerChiSiamoHome div.bigColumn80{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 50px;
+        align-items: center;
+    }
+    .imgBannerChiSiamoHome{
+        margin-top: 0;
+    }
+    .bannerChiSiamoHome h3{
+        position: relative;
+        top: -30px;
+    }
+    .bannerMenuHomeTitle{
+        border-right: 12px solid #ffffff;
+        border-left: 12px solid #ffffff;
+    }
+    .containerMainBannerMenuHome{
+        display: flex;
+        flex-direction: column;
+    }
+    .menuHomeSectionButtonWrap{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .menuHomeSectionButtonWrap>*{
+        margin-left: 20px;
+    }
+    .-fx-gal-item {
+        width: 30%;
+    }
+    .pageTitle{
+        font-size: 200px;
+        bottom: -20%;
+    }
+    .bannerMenuHome .paragraph{
+        width: 60%;
+    }
+    .firstBannerAbout, .firstBannerMenu, .firstBannerContact,.lowerPartFooter,.secondBannerAbout{
+    border: 12px solid #ffffff;
+    border-top: 0;
+    }
+    .upperPartFooter, .containerMainBannerMenuHome{
+    border: 12px solid #ffffff;
+    border-bottom: 0;
+    border-top: 0; 
+    }
+    .secondBannerAbout{
+        margin: 0 auto;
+        margin-top: 100px;
+        border-bottom: 12px solid #ffffff;
+        width: 60%;
+    }
+    .normalMargin{
+        margin-top: 0;
+    }
+    .secondBannerMenu{
+    margin-top: 100px;
+    width: 80%;
+    }
+    .menu {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 80px;
+   }
+   .buttons-container {
+    margin-bottom: 60px;
+    }
+    .item__title{
+        font-size: 40px;
+        font-family:'photograph_signatureregular', Arial, Helvetica, sans-serif;
+        font-weight: 100;
+    }
+    .item__price{
+        font-size: 31px;
+    }
+}
+

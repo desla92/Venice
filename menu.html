@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- link a favicon -->
+    <link rel="shortcut icon" href="img/veniceFavicon.png" type="image/favicon">
+    <!-- link al font -->
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- link a css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Venice - Chi siamo</title>
+    
+</head>
+<body>
+    <div class="addressTopForDesktop onlyDesktop"><p class="uppercase tac">Corso Buenos Aires 2, Milano - Zona Porta Venezia - <a href="tel:022047447" style="text-decoration: underline;">022047447</a></p></div>
+    <header>
+        <div class="bigColumn80">
+            <a id="myBtnModal" class="btn onlyDesktop fw500 uppercase tac" href="javascript:void(0)">Prenota ora</a>
+            <nav>
+                <div class="hamburgerBtn">
+                    <input type="checkbox">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul id='menu'class="uppercase fw500">
+                    <li><a class ="whiteText fw500" href="index.html">Home</a></li>
+                    <li><a class ="whiteText fw500"href="about.html">Chi siamo</a></li>
+                    <li class="active"><a class ="whiteText fw500"href="menu.html">Menu</a></li>
+                    <li><a class ="whiteText fw500"href="contact.html">Contatti</a></li>
+                    <li class="fw500 dropdown whiteText">Lingua <img src="img/italianFlag.svg" alt="bandiera lingua italiana"><ion-icon name="chevron-down-outline"></ion-icon>
+                    <div class="dropdown-content dropdown-content-closed">
+                        <p><img src="img/italianFlag.svg" alt="bandiera lingua italiana">Italiano</p>
+                        <p><img src="img/englishFlag.png" alt="bandiera lingua inglese">English</p>
+                    </div></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="firstBannerMenu">
+        <h1 class="pageTitle photoFont fadeInLeft">Menú</h1>
+    </section>
+    <section class="secondBannerMenu">
+        <div class="innerSecondBannerAbout">
+            <div class="tac">
+                <p class="tac paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto nesciunt est reprehenderit corporis vitae, et velit quae veritatis ducimus iure corrupti, soluta, maxime aperiam suscipit quaerat. Explicabo, pariatur. Totam, esse? </p>
+            </div>
+        </div>
+    </section>
+    <div class="wrapper">
+
+        <div class="buttons-container">
+          <a href="#" class="button button--is-active" data-target="antipasti">antipasti</a>
+          <a href="#" class="button" data-target="primi">primi</a>
+          <a href="#" class="button" data-target="secondi">secondi</a>
+          <a href="#" class="button" data-target="pizze">pizze</a>
+          <a href="#" class="button" data-target="dolci">dolci</a>
+          <a href="#" class="button" data-target="bevande">bevande</a>
+        </div>
+      
+        <!-- start antipasti Menu -->
+        <div class="menu menu--is-visible" id="antipasti">
+          <div class="item">
+            <div class="item__header">
+              <h3 class="item__title ">Insalata Caprese</h3>
+              <ion-icon name="leaf-outline"></ion-icon>
+              <span class="item__dots"></span>
+              <span class="item__price">€10</span>
+            </div>
+            <p class="item__description">Pomodoro e mozzarella</p>
+          </div>
+      
+          <div class="item">
+            <div class="item__header">
+              <h3 class="item__title ">Insalata Venice</h3>
+              <span class="item__dots"></span>
+              <span class="item__price">€10</span>
+            </div>
+            <p class="item__description">Insalata, Pomodoro, Olive, Mozzarella, Tonno</p>
+          </div>
+      
+          <div class="item">
+            <div class="item__header">
+              <h3 class="item__title ">Salumi misti</h3>
+              <span class="item__dots"></span>
+              <span class="item__price">€12</span>
+            </div>
+            <p class="item__description">Selezione di salumi misti tipici locali</p>
+          </div>
+      
+          <div class="item">
+            <div class="item__header">
+              <h3 class="item__title ">Formaggi Misti</h3>
+              <ion-icon name="leaf-outline"></ion-icon>
+              <span class="item__dots"></span>
+              <span class="item__price">€12</span>
+            </div>
+            <p class="item__description">Selezione di salumi misti tipici locali</p>
+          </div>
+
+          <div class="item">
+            <div class="item__header">
+              <h3 class="item__title ">Zuppa di verdure</h3>
+              <ion-icon name="leaf-outline"></ion-icon>
+              <span class="item__dots"></span>
+              <span class="item__price">€8</span>
+            </div>
+            <p class="item__description">Mix di verdure selezionate in brodo</p>
+          </div>
+
+          <div class="item">
+            <div class="item__header">
+              <h3 class="item__title ">Focaccia</h3>
+              <ion-icon name="leaf-outline"></ion-icon>
+              <span class="item__dots"></span>
+              <span class="item__price">€6</span>
+            </div>
+            <p class="item__description">Focaccia con farine selezionate</p>
+          </div>
+        </div> <!-- End antipasti Menu -->
+      
+        <!-- Start primi Menu -->
+        <div class="menu" id="primi">
+          <div class="item">
+            <div class="item__header">
+              <h3 class="item__title ">Spaghetti con lo scoglio</h3>
+              <span class="item__dots"></span>
+              <span class="item__price">€12</span>
+            </div>
+            <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+          </div>
+      
+          <div class="item">
+            <div class="item__header">
+              <h3 class="item__title ">Penne al pomodoro</h3>
+              <ion-icon name="leaf-outline"></ion-icon>
+              <span class="item__dots"></span>
+              <span class="item__price">€7</span>
+            </div>
+            <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+          </div>
+      
+          <div class="item">
+            <div class="item__header">
+              <h3 class="item__title ">Spaghetti alla carbonara</h3>
+              <span class="item__dots"></span>
+              <span class="item__price">€8</span>
+            </div>
+            <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+          </div>
+      
+          <div class="item">
+            <div class="item__header">
+              <h3 class="item__title ">Tagliatelle alla bolognese</h3>
+              <span class="item__dots"></span>
+              <span class="item__price">€8</span>
+            </div>
+            <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+          </div>
+          <div class="item">
+            <div class="item__header">
+              <h3 class="item__title ">Lasagne al ragú</h3>
+              <span class="item__dots"></span>
+              <span class="item__price">€8</span>
+            </div>
+            <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+          </div>
+          <div class="item">
+            <div class="item__header">
+              <h3 class="item__title ">Penne al pesto</h3>
+              <ion-icon name="leaf-outline"></ion-icon>
+              <span class="item__dots"></span>
+              <span class="item__price">€8</span>
+            </div>
+            <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+          </div>
+          <div class="item">
+            <div class="item__header">
+              <h3 class="item__title ">Risotto alla milanese</h3>
+              <ion-icon name="leaf-outline"></ion-icon>
+              <span class="item__dots"></span>
+              <span class="item__price">€10</span>
+            </div>
+            <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+          </div>
+          <div class="item">
+            <div class="item__header">
+              <h3 class="item__title ">Risotto ai funghi porcini</h3>
+              <ion-icon name="leaf-outline"></ion-icon>
+              <span class="item__dots"></span>
+              <span class="item__price">€10</span>
+            </div>
+            <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+          </div>
+          <div class="item">
+            <div class="item__header">
+              <h3 class="item__title ">Ossobuco & Risotto</h3>
+              <span class="item__dots"></span>
+              <span class="item__price">€20</span>
+            </div>
+            <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+          </div>
+          <div class="item">
+            <div class="item__header">
+              <h3 class="item__title ">Penne all'arrabbiata</h3>
+              <ion-icon name="leaf-outline"></ion-icon>
+              <span class="item__dots"></span>
+              <span class="item__price">€8</span>
+            </div>
+            <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+          </div>
+          <div class="item">
+            <div class="item__header">
+              <h3 class="item__title ">Spaghetti alla matriciana</h3>
+              <span class="item__dots"></span>
+              <span class="item__price">€8</span>
+            </div>
+            <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+          </div>
+          <div class="item">
+            <div class="item__header">
+              <h3 class="item__title ">Melanzane alla parmigiana</h3>
+              <ion-icon name="leaf-outline"></ion-icon>
+              <span class="item__dots"></span>
+              <span class="item__price">€10</span>
+            </div>
+            <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+          </div>
+          <div class="item">
+            <div class="item__header">
+              <h3 class="item__title ">Risotto ai frutti di mare</h3>
+              <span class="item__dots"></span>
+              <span class="item__price">€12</span>
+            </div>
+            <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+          </div>
+          
+        </div> <!-- End primi Menu -->
+      
+        <!-- Start secondi Menu -->
+        <div class="menu" id="secondi">
+            <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Filetto</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€22</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Costata di manzo</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€18</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Nodino di vitello</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€15</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Tagliata rucola e grana</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€18</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Cotoletta alla milanese</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€15</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Petto di pollo</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€12</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Spada ai ferri</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€16</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Salmone ai ferri</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€14</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Fritto di mare</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€16</span>
+                </div>
+                <p class="item__description">Calamari e gamberetti</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Insalata di mare</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€16</span>
+                </div>
+                <p class="item__description">Secondo disponibilitá stagionale</p>
+              </div>
+              <p>Contorno incluso con ogni secondo (patate o verdure alla griglia)</p>
+        </div> <!-- End secondi Menu -->
+        
+        <!-- Start pizze Menu -->
+        <div class="menu" id="pizze">
+            <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Margherita</h3>
+                  <ion-icon name="leaf-outline"></ion-icon>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€7</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Prosciutto & funghi</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€9</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Quattro stagioni</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€10</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Quattro formaggi</h3>
+                  <ion-icon name="leaf-outline"></ion-icon>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€10</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Salame piccante</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€9</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Crudo, rucola, grana</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€10</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Pizza al pesto</h3>
+                  <ion-icon name="leaf-outline"></ion-icon>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€9</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Vegetariana</h3>
+                  <ion-icon name="leaf-outline"></ion-icon>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€9</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Tonno & cipolla</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€10</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Speck & Brie</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€9</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Pollo & verdure</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€12</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Wurstel & patate</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€9</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+        </div> <!-- End pizze Menu -->
+        
+        <!-- Start dolci Menu -->
+        <div class="menu" id="dolci">
+            <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Tiramisú</h3>
+                  <ion-icon name="leaf-outline"></ion-icon>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€4</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Millefoglie</h3>
+                  <ion-icon name="leaf-outline"></ion-icon>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€4</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Crostata di frutta</h3>
+                  <ion-icon name="leaf-outline"></ion-icon>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€4</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Torta cioccolato e pere</h3>
+                  <ion-icon name="leaf-outline"></ion-icon>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€4</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Caffé</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€2</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Cappuccino, The caldo</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€2.5</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Amari nazionali</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€4</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Amari esteri</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€6</span>
+                </div>
+                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum officia eaque nobis ut.</p>
+              </div>
+              
+        </div> <!-- End dolci Menu -->
+
+        <!-- start bevande Menu -->
+        <div class="menu" id="bevande">
+            <div class="item">
+              <div class="item__header">
+                <h3 class="item__title ">Acqua 1L</h3>
+                <span class="item__dots"></span>
+                <span class="item__price">€3</span>
+              </div>
+              <p class="item__description"></p>
+            </div>
+        
+            <div class="item">
+              <div class="item__header">
+                <h3 class="item__title ">Bibite</h3>
+                <span class="item__dots"></span>
+                <span class="item__price">€3.5</span>
+              </div>
+              <p class="item__description">Coca-cola, Fanta, Sprite, The freddo, Lemonsoda</p>
+            </div>
+        
+            <div class="item">
+              <div class="item__header">
+                <h3 class="item__title ">Birre in bottiglia</h3>
+                <span class="item__dots"></span>
+                <span class="item__price">€4.5</span>
+              </div>
+              <p class="item__description"></p>
+            </div>
+        
+            <div class="item">
+              <div class="item__header">
+                <h3 class="item__title ">Birre alla spina</h3>
+                <span class="item__dots"></span>
+                <span class="item__price">€4-€6</span>
+              </div>
+              <p class="item__description">Warstainer o Menabrea</p>
+            </div>
+  
+            <div class="item">
+              <div class="item__header">
+                <h3 class="item__title ">Vino al bicchiere</h3>
+                <span class="item__dots"></span>
+                <span class="item__price">€4</span>
+              </div>
+              <p class="item__description"></p>
+            </div>
+  
+            <div class="item">
+              <div class="item__header">
+                <h3 class="item__title ">Spumante al bicchiere</h3>
+                <span class="item__dots"></span>
+                <span class="item__price">€4.5</span>
+              </div>
+              <p class="item__description"></p>
+            </div>
+
+            <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Cocktail</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€7</span>
+                </div>
+                <p class="item__description">Vodka Lemon, Gin Tonic, Negroni, Coca Rum</p>
+              </div>
+
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Aperol Spritz</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€5</span>
+                </div>
+                <p class="item__description"></p>
+              </div>
+
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Vino in bottiglia</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€18</span>
+                </div>
+                <p class="item__description"></p>
+              </div>
+
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Spumante in bottiglia</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€25</span>
+                </div>
+                <p class="item__description"></p>
+              </div>
+
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Champagne</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€60</span>
+                </div>
+                <p class="item__description"></p>
+              </div>
+
+              <div class="item">
+                <div class="item__header">
+                  <h3 class="item__title ">Brunello di Montalcino</h3>
+                  <span class="item__dots"></span>
+                  <span class="item__price">€50</span>
+                </div>
+                <p class="item__description"></p>
+              </div>
+          </div> <!-- End bevande Menu -->
+
+      </div> <!-- End Wrapper -->
+    <footer>
+        <div class="upperPartFooter redBg tac whiteText">
+            <p class="uppercase fw500 footerTitle">Ristorante Pizzeria Venice</p>
+            <p class="footerSubTitle"><em>L’accoglienza e l’amore di casa con la cura e la passione di un ristorante</em></p>
+            <hr>
+            <p>Corso Buenos Aires 2, Milano - Zona Porta Venezia</p>
+            <hr>
+            <p>Lun - Dom <br> 12:00 - 23:00</p>
+            <p style="padding-bottom: 0;">SEGUICI</p>
+            <div>
+              <a href="https://www.facebook.com/veniceristorantemilano" target="blank"><ion-icon class="whiteText" name="logo-facebook"></ion-icon></a>
+              <a href="https://www.instagram.com/venice.ristorantepizzeria/" target="blank"><ion-icon class="whiteText" name="logo-instagram"></ion-icon></a>
+          </div>
+        </div>
+        <div class="lowerPartFooter whiteText  tac">
+          <ion-icon name="chevron-up-outline"></ion-icon>
+          <?xml version="1.0" encoding="utf-8"?>
+          <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="200" height="80" viewBox="0 0 182.81 60.47"><defs><style>.cls-1{fill:#962120;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1-2"><path class="cls-1" d="M182.81,58.45c-14.23.14-26.09-5.11-36.56-14.21-8.48-7.35-15.34-16.17-22.64-24.61A81.29,81.29,0,0,0,110.46,6.89C104.7,2.62,98.44,0,91.4,0S78.11,2.62,72.35,6.86A82.62,82.62,0,0,0,59.19,19.6C51.91,28,45.05,36.87,36.58,44.22,26.09,53.32,14.23,58.56,0,58.45v1.91l182.81.11Z"/></g></g></svg>
+            <p>© Venice Ristorante Pizzeria &nbsp; • &nbsp; Corso Buenos Aires 2, Milano &nbsp; • &nbsp; Tel: <a class="whiteText underline" href="tel:022047447">+39022047447</a> &nbsp; • &nbsp; <a class="whiteText underline" href="#">Cookie Policy</a> &nbsp; • &nbsp; <a class="whiteText underline" href="#">Privacy Policy</a> &nbsp; • &nbsp; Designed by <span>Desiré Lanza</span></p>
+        </div>
+    </footer>
+</body>
+<!-- link agli script -->
+<script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+<script src="js/veniceMenu.js"></script>
+<script src="js/lottie.js"></script>
+<script src="js/index.js"></script>
+</html>
