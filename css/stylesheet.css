@@ -6,5 +6,5 @@
          url('../PhotographSignatureFont/photograph_signature-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
+    font-display: swap;
 }
