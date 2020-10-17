@@ -185,7 +185,7 @@ nav>ul{
     position: relative;
     background-image: url("../img/img5.jpg");
     height: 95vh; 
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -800,6 +800,9 @@ footer .footerSubTitle{
     }
     .item__price{
         font-size: 31px;
+    }
+    .firstBannerHome{
+        background-attachment: fixed;
     }
 }
 
