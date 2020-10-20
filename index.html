@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/stylesheet.css">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- link a css -->
+    <link rel="stylesheet" href="node_modules/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -27,28 +28,37 @@
       <h2 class="photoFont tac">Prenota il tuo tavolo</h2>
     </div>
     <div class="modal-body">
-      <form action="">
+      <p class="tac">Prenota telefonicamente chiamando lo <a href="tel:022047447" style="text-decoration: underline;">022047447</a></p>
+      <hr>
+      <p class="tac">OPPURE</p>
+      <p class="tac">
+        compila il form e aspetta per la mail di conferma</p>
+      <form action="booktable.php" method="post">
         <div>
-          <label for="people">N Persone: </label>
-          <input id="number" type="number" value="1">
+          <label for="reservation-email">Email <span style="color: red;">*</span> </label>
+          <input name="reservation-email" id="reservation-email" type="email" placeholder="La tua email" required>
         </div>
         <div>
-          <label for="name">Nome: </label>
-          <input id="reservation-name" type="text" placeholder="Il tuo nome">
+          <label for="reservation-name">Nome <span style="color: red;">*</span></label>
+          <input name="reservation-name" id="reservation-name" type="text" placeholder="Il tuo nome" required>
         </div>
         <div>
-          <label for="email">Email: </label>
-          <input id="reservation-email" type="text" placeholder="La tua email">
+          <label for="reservation-date">Data <span style="color: red;">*</span> </label>
+          <input name="reservation-date" id="reservation-date" class="calendario" placeholder="Seleziona una data" data-date-format="d/m/y" required>
         </div>
         <div>
-          <label for="reservation-datetime">Quando: </label>
-          <input id="reservation-datetime" type="date">
+          <label for="reservation-time">Orario <span style="color: red;">*</span></label>
+          <input name="reservation-time" id="reservation-time" class="orario" placeholder="Seleziona un orario" required>
         </div>
-        <button type="submit">Invia richiesta</button>
+        <div>
+          <label for="people">n. Persone <span style="color: red;">*</span></label>
+          <input name="people" id="people" type="number" value="1" required>
+        </div>
+        <div class="lastCheckboxDiv">
+          <input type="checkbox"><p style="font-size: 12px;" >Autorizzo al trattamento dei miei dati personali</p> 
+        </div>
+        <button class="btn uppercase fw500" type="submit">Invia richiesta</button>
       </form>
-    </div>
-    <div class="modal-footer">
-      <p class="tac">Vuoi celebrare il tuo grande giorno qui da noi? <br> Mandaci i dettagli o chiamaci,penseremo noi a rendere il tuo evento indimenticabile.</p>
     </div>
   </div>
 
@@ -103,10 +113,13 @@
             <div class="tac">
                 <h2 class="onlyDesktop tac fw700">VENICE</h2>
                 <h3 class="photoFont tac fs64">Chi siamo</h3>
-                <p class="tac paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto nesciunt est reprehenderit corporis vitae, et velit quae veritatis ducimus iure corrupti, soluta, maxime aperiam suscipit quaerat. Explicabo, pariatur. Totam, esse? </p><hr><p class="bannerChiSiamoHomeParagraph paragraph tac">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed corrupti corporis, natus veritatis laudantium quam debitis possimus tempora animi ratione, dolore distinctio eos dolorem minus neque necessitatibus aliquid voluptates. A?</p>
+                <p class="taj paragraph lh2">Come tutte le belle storie anche la nostra inizia con un c’era una volta. 
+                  Prima c’era solo papá Rocco, ora ci sono anche la moglie Mariarosa e i figli Manuela e Luca ad accogliervi nel loro <strong> ristorante dai toni familiari e accoglienti</strong>.</p>
+                <hr>
+                <p class="bannerChiSiamoHomeParagraph paragraph taj">Qui nel bel mezzo della movida milanese, proprio nella zona di Porta Venezia potrete riscoprire la tradizione del nostro paese con un tocco di modernità. Un posto dove poter assaporare l’autentica cucina italiana e dove gli ingredienti vengono scelti con cura proprio dai proprietari che vogliono infatti offrirvi <strong>ogni giorno la qualità migliore al miglior prezzo in centro a Milano</strong>. </p>
                 <a class="btn fw500 uppercase tac" href="about.html">Scopri di piú</a>
             </div>
-            <div class="imgBannerChiSiamoHome"><img src="img/provaImg.jpg" alt=""></div>
+            <div class="imgBannerChiSiamoHome"><img src="img/IMG_5981b.jpg" alt=""></div>
         </div>
     </section>
     <section class="bannerMenuHome">
@@ -114,20 +127,13 @@
         <div class="containerMainBannerMenuHome">
             <div class="bigColumn80">
                 <hr>
-                <p class="tac paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore quas quis suscipit ratione, modi ad cum, quae doloribus vero in autem assumenda tenetur. Quaerat soluta consectetur non ratione ea.</p>
-                <br>
-                <p class="tac paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sunt eos, ut perspiciatis at tenetur fugiat repudiandae delectus a natus laudantium voluptatem commodi autem earum omnis fuga aliquid est unde.</p>
+                <p class="taj paragraph lh2">Venice Ristorante Pizzeria offre <strong>una ampia varietá di piatti della tradizione italiana.</strong>  La selezione degli ingredienti viene fatta direttamente da noi per offrirvi il meglio delle nostre zone. Siamo molto attenti alla qualitá delle materie prime perché crediamo che proprio quelle rendano il piatto unico e gustoso.</p>
+                <hr>
+                <p class="taj paragraph lh2"><strong> Nel nostro menú troverete specialità di Carne e di Pesce e, naturalmente, pizze realizzate con lievitazione naturale di almeno 24 ore.</strong> Venite a provare la nostra pizza leggerissima e ad alta digeribilitá. Vogliamo che i nostri clienti soddisfatti siano la nostra migliore pubblicitá.</p>
                 <div class="menuHomeSectionButtonWrap">
                     <a class="btn fw500 uppercase tac" href="menu.html">Scopri il menú</a>
-                    <a class="btn fw500 uppercase tac onlyMobile" href="">Prenota ora</a>
+                    <a id="myBtnModal" class="btn fw500 uppercase tac onlyMobile" href="javascript:void(0)">Prenota ora</a>
                 </div>
-                <!-- <div class="menuHomeSectionImgWrap">
-                    <img src="https://via.placeholder.com/300/C62D2C/FFFFFF?Text=VENICE" alt="">
-                    <img src="https://via.placeholder.com/300/C62D2C/FFFFFF?Text=VENICE" alt="">
-                    <img src="https://via.placeholder.com/300/C62D2C/FFFFFF?Text=VENICE" alt="">
-                    <img src="https://via.placeholder.com/300/C62D2C/FFFFFF?Text=VENICE" alt="">
-                    <img src="https://via.placeholder.com/300/C62D2C/FFFFFF?Text=VENICE" alt="">
-                </div> -->
                 <div class="-fx-image-gal">
 
                     <div class="-fx-gal-item">
@@ -212,6 +218,7 @@
 </body>
 <!-- link agli script -->
 <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+<script src="node_modules/flatpickr/dist/flatpickr.min.js"></script>
 <script src="js/animation.js"></script>
 <script src="js/lottie.js"></script>
 <script src="js/index.js"></script>

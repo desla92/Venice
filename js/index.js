@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', evt => {
-   
     //responsive menu 
     const hamburgerInput = document.querySelector('nav input');
     const hamburgerBtn = document.querySelector('.hamburgerBtn');
@@ -91,6 +90,18 @@ window.addEventListener('click', evt => {
     modal.style.display = "none";
   }
 })
+
+//input datetime with flatpickr
+    flatpickr(".calendario", {
+      minDate: "today"
+    });  
+    flatpickr(".orario", {
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "H:i",
+      minTime: "12:00",
+      maxTime: "23:00",
+    }); 
 
 
 });

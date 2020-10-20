@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/stylesheet.css">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- link a css -->
+    <link rel="stylesheet" href="node_modules/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -17,6 +18,51 @@
     
 </head>
 <body>
+      <!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2 class="photoFont tac">Prenota il tuo tavolo</h2>
+      </div>
+      <div class="modal-body">
+        <p class="tac">Prenota telefonicamente chiamando lo <a href="tel:022047447" style="text-decoration: underline;">022047447</a></p>
+        <hr>
+        <p class="tac">OPPURE</p>
+        <p class="tac">
+          compila il form e aspetta per la mail di conferma</p>
+        <form action="">
+          <div>
+            <label for="reservation-email">Email <span style="color: red;">*</span> </label>
+            <input id="reservation-email" type="email" placeholder="La tua email" required>
+          </div>
+          <div>
+            <label for="reservation-name">Nome <span style="color: red;">*</span></label>
+            <input id="reservation-name" type="text" placeholder="Il tuo nome" required>
+          </div>
+          <div>
+            <label for="reservation-date">Data <span style="color: red;">*</span> </label>
+            <input id="reservation-date" class="calendario" placeholder="Seleziona una data" data-date-format="d/m/y" required>
+          </div>
+          <div>
+            <label for="reservation-time">Orario <span style="color: red;">*</span></label>
+            <input id="reservation-time" class="orario" placeholder="Seleziona un orario" required>
+          </div>
+          <div>
+            <label for="people">n. Persone <span style="color: red;">*</span></label>
+            <input id="people" type="number" value="1" required>
+          </div>
+          <div class="lastCheckboxDiv">
+            <input type="checkbox"><p style="font-size: 12px;" >Autorizzo al trattamento dei miei dati personali</p> 
+          </div>
+          <button class="btn uppercase fw500" type="submit">Invia richiesta</button>
+        </form>
+      </div>
+    </div>
+  
+  </div>
     <div class="addressTopForDesktop onlyDesktop"><p class="uppercase tac">Corso Buenos Aires 2, Milano - Zona Porta Venezia - <a href="tel:022047447" style="text-decoration: underline;">022047447</a></p></div>
     <header>
         <div class="bigColumn80">
@@ -47,6 +93,55 @@
         <h1 class="pageTitle photoFont fadeInLeft">Contatti</h1>
     </section>
     <section class="secondBannerContact">
+        <div class="bigColumn80">
+            <div>
+                <h3 class="photoFont tac fs64">Dove trovarci</h3>
+                <div class="indicazioniContatti">
+                    <p><strong  class="uppercase">indirizzo</strong> Corso Buenos Aires 2, Milano</p>
+                    <br>
+                    <hr>
+                    <br>
+                    <p><strong  class="uppercase">telefono</strong> <a href="tel:022047447" style="text-decoration: underline;">022047447</a></p>
+                    <br>
+                    <hr>
+                    <br>
+                    <p><strong  class="uppercase">orario</strong> Lunedí - Domenica dalle 12:00 alle 23:00</p>
+                    <br>
+                    <hr>
+                    <br>
+                    <p class="tac"><strong  class="uppercase">come raggiungerci</strong><br><br> Metro: M1 fermata Porta Venezia <br>Passante ferroviario: S1 - S2 - S5 - S6 - S12 - S13 <br>Tram: 9 - 33 - 5</p>
+                    <br>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h3 class="photoFont tac fs64 mobilePadding">Scrivici</h3>
+                </div>
+                <p class="lh2 taj">Stai cercando una location per il tuo evento? Crediamo di essere quello che fa per voi! Scrivici per organizzare insieme e rendere speciale il tuo grande giorno, qualunque esso sia battesimo, laurea, compleanno, etc... Compila il form per qualsiasi info tu abbia bisogno e verrai ricontattato al piú presto</p>
+                <form action="">
+                    <div>
+                    <label for="info-email">Email <span style="color: red;">*</span> </label>
+                    <input id="info-email" type="email" placeholder="La tua email" required>
+                    </div>
+                    <div>
+                    <label for="info-name">Nome <span style="color: red;">*</span></label>
+                    <input id="info-name" type="text" placeholder="Il tuo nome" required>
+                    </div>
+                    <div>
+                    <label for="info-message">Messaggio <span style="color: red;">*</span></label>
+                    <input id="info-message" type="textarea" rows="4" cols="50"placeholder="Il tuo messaggio" required>
+                    </div>
+                    <div class="lastCheckboxDiv">
+                    <input type="checkbox"><p style="font-size: 12px;" >Autorizzo al trattamento dei miei dati personali</p> 
+                    </div>
+                    <button class="btn uppercase fw500" type="submit">Invia richiesta</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="thirdBannerContact">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.7435378728487!2d9.203728315539676!3d45.47496994074571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6bf42c0bd0f%3A0x878f9b8bac2bc6b6!2sVenice%20Ristorante%20Pizzeria!5e0!3m2!1sen!2sit!4v1603020993697!5m2!1sen!2sit" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <a class="btn uppercase fw500 tac" target="blank" href="https://www.google.com/maps/dir//Venice+Ristorante+Pizzeria,+Corso+Buenos+Aires,+2,+20129+Milano+MI/@45.474966,9.205917,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4786c6bf42c0bd0f:0x878f9b8bac2bc6b6!2m2!1d9.205917!2d45.4749662?hl=en">ottieni indicazioni</a>
     </section>
     <footer>
         <div class="upperPartFooter redBg tac whiteText">
@@ -72,6 +167,6 @@
 </body>
 <!-- link agli script -->
 <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
-<script src="js/lottie.js"></script>
+<script src="node_modules/flatpickr/dist/flatpickr.min.js"></script>
 <script src="js/index.js"></script>
 </html>

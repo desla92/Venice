@@ -9,7 +9,8 @@
     <!-- link al font -->
     <link rel="stylesheet" href="css/stylesheet.css">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <!-- link a css -->
+    <!-- link a css -->    
+    <link rel="stylesheet" href="node_modules/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -17,6 +18,51 @@
     
 </head>
 <body>
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2 class="photoFont tac">Prenota il tuo tavolo</h2>
+    </div>
+    <div class="modal-body">
+      <p class="tac">Prenota telefonicamente chiamando lo <a href="tel:022047447" style="text-decoration: underline;">022047447</a></p>
+      <hr>
+      <p class="tac">OPPURE</p>
+      <p class="tac">
+        compila il form e aspetta per la mail di conferma</p>
+      <form action="">
+        <div>
+          <label for="reservation-email">Email <span style="color: red;">*</span> </label>
+          <input id="reservation-email" type="email" placeholder="La tua email" required>
+        </div>
+        <div>
+          <label for="reservation-name">Nome <span style="color: red;">*</span></label>
+          <input id="reservation-name" type="text" placeholder="Il tuo nome" required>
+        </div>
+        <div>
+          <label for="reservation-date">Data <span style="color: red;">*</span> </label>
+          <input id="reservation-date" class="calendario" placeholder="Seleziona una data" data-date-format="d/m/y" required>
+        </div>
+        <div>
+          <label for="reservation-time">Orario <span style="color: red;">*</span></label>
+          <input id="reservation-time" class="orario" placeholder="Seleziona un orario" required>
+        </div>
+        <div>
+          <label for="people">n. Persone <span style="color: red;">*</span></label>
+          <input id="people" type="number" value="1" required>
+        </div>
+        <div class="lastCheckboxDiv">
+          <input type="checkbox"><p style="font-size: 12px;" >Autorizzo al trattamento dei miei dati personali</p> 
+        </div>
+        <button class="btn uppercase fw500" type="submit">Invia richiesta</button>
+      </form>
+    </div>
+  </div>
+
+</div>
     <div class="addressTopForDesktop onlyDesktop"><p class="uppercase tac">Corso Buenos Aires 2, Milano - Zona Porta Venezia - <a href="tel:022047447" style="text-decoration: underline;">022047447</a></p></div>
     <header>
         <div class="bigColumn80">
@@ -49,19 +95,19 @@
     <section class="secondBannerMenu">
         <div class="innerSecondBannerAbout">
             <div class="tac">
-                <p class="tac paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto nesciunt est reprehenderit corporis vitae, et velit quae veritatis ducimus iure corrupti, soluta, maxime aperiam suscipit quaerat. Explicabo, pariatur. Totam, esse? </p>
+                <p class="taj paragraph lh2">La cucina propone piatti della tradizione mediterranea con materie prime scelte con cura da noi e provenienti dal nostro territorio, frutto di una costante e attenta ricerca di prodotti di alta qualità e produzione locale. <strong> Carni selezionate, pesce fresco e verdure di stagione vengono preparati in modo semplice e gustoso e con un inconfondibile tocco familiare.</strong></p><hr>  <p class="taj paragraph lh2">Venice Pizzeria offre una <strong>pizza dalle caratteristiche uniche</strong> : farina prodotta con grano di provenienza esclusivamente italiana, salsa di pomodoro 100% italiana e, fiore all’occhiello, la mozzarella fior di latte pugliese del Caseificio di Ceglie Messapica (Brindisi) consegnata ogni giorno nella sua freschezza e lavorata al fine di permettere di gustarne il sapore genuino anche alle alte temperature alle quali viene sottoposta durante la cottura.<strong> Nel nostro menú troverete specialità di Carne e di Pesce e pizze realizzate con lievitazione naturale di almeno 24 ore. </strong> </p>
             </div>
         </div>
     </section>
     <div class="wrapper">
 
         <div class="buttons-container">
-          <a href="#" class="button button--is-active" data-target="antipasti">antipasti</a>
-          <a href="#" class="button" data-target="primi">primi</a>
-          <a href="#" class="button" data-target="secondi">secondi</a>
-          <a href="#" class="button" data-target="pizze">pizze</a>
-          <a href="#" class="button" data-target="dolci">dolci</a>
-          <a href="#" class="button" data-target="bevande">bevande</a>
+          <a href="#" class="button tac button--is-active" data-target="antipasti">antipasti</a>
+          <a href="#" class="button tac" data-target="primi">primi</a>
+          <a href="#" class="button tac" data-target="secondi">secondi</a>
+          <a href="#" class="button tac" data-target="pizze">pizze</a>
+          <a href="#" class="button tac" data-target="dolci">dolci</a>
+          <a href="#" class="button tac" data-target="bevande">bevande</a>
         </div>
       
         <!-- start antipasti Menu -->
@@ -642,6 +688,6 @@
 <!-- link agli script -->
 <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
 <script src="js/veniceMenu.js"></script>
-<script src="js/lottie.js"></script>
+<script src="node_modules/flatpickr/dist/flatpickr.min.js"></script>
 <script src="js/index.js"></script>
 </html>

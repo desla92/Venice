@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/stylesheet.css">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- link a css -->
+    <link rel="stylesheet" href="node_modules/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -17,6 +18,51 @@
     
 </head>
 <body>
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2 class="photoFont tac">Prenota il tuo tavolo</h2>
+    </div>
+    <div class="modal-body">
+      <p class="tac">Prenota telefonicamente chiamando lo <a href="tel:022047447" style="text-decoration: underline;">022047447</a></p>
+      <hr>
+      <p class="tac">OPPURE</p>
+      <p class="tac">
+        compila il form e aspetta per la mail di conferma</p>
+      <form action="">
+        <div>
+          <label for="reservation-email">Email <span style="color: red;">*</span> </label>
+          <input id="reservation-email" type="email" placeholder="La tua email" required>
+        </div>
+        <div>
+          <label for="reservation-name">Nome <span style="color: red;">*</span></label>
+          <input id="reservation-name" type="text" placeholder="Il tuo nome" required>
+        </div>
+        <div>
+          <label for="reservation-date">Data <span style="color: red;">*</span> </label>
+          <input id="reservation-date" class="calendario" placeholder="Seleziona una data" data-date-format="d/m/y" required>
+        </div>
+        <div>
+          <label for="reservation-time">Orario <span style="color: red;">*</span></label>
+          <input id="reservation-time" class="orario" placeholder="Seleziona un orario" required>
+        </div>
+        <div>
+          <label for="people">n. Persone <span style="color: red;">*</span></label>
+          <input id="people" type="number" value="1" required>
+        </div>
+        <div class="lastCheckboxDiv">
+          <input type="checkbox"><p style="font-size: 12px;" >Autorizzo al trattamento dei miei dati personali</p> 
+        </div>
+        <button class="btn uppercase fw500" type="submit">Invia richiesta</button>
+      </form>
+    </div>
+  </div>
+
+</div>
     <div class="addressTopForDesktop onlyDesktop"><p class="uppercase tac">Corso Buenos Aires 2, Milano - Zona Porta Venezia - <a href="tel:022047447" style="text-decoration: underline;">022047447</a></p></div>
     <header>
         <div class="bigColumn80">
@@ -49,7 +95,10 @@
     <section class="secondBannerAbout">
         <div class="innerSecondBannerAbout">
             <div class="tac">
-                <p class="tac paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto nesciunt est reprehenderit corporis vitae, et velit quae veritatis ducimus iure corrupti, soluta, maxime aperiam suscipit quaerat. Explicabo, pariatur. Totam, esse? </p><hr><p class="paragraph tac">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed corrupti corporis, natus veritatis laudantium quam debitis possimus tempora animi ratione, dolore distinctio eos dolorem minus neque necessitatibus aliquid voluptates. A?</p>
+                <p class="taj paragraph lh2">Come tutte le belle storie anche la nostra inizia con un c’era una volta. Il nostro ristornate Venice infatti ha radice solide nei lontani anni sessanta, quando Rocco, l’uomo pelato della foto ancora aveva i capelli. Salito dalla Puglia, poco più che ragazzino giunge a Milano e lavorando sodo riesce finalmente ad intraprendere la sua carriera imprenditoriale aprendo il suo primo locale nel 1978.</p>
+                <hr>
+                <p class="paragraph taj">Prima c’era solo papá Rocco, ora ci sono anche la moglie Mariarosa e i figli Manuela e Luca ad accogliervi nel loro ristorante dai toni famigliari e accoglienti.
+                </p>
             </div>
         </div>
     </section>
@@ -87,7 +136,9 @@
     <section class="secondBannerAbout normalMargin">
         <div class="innerSecondBannerAbout">
             <div class="tac">
-                <p class="tac paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto nesciunt est reprehenderit corporis vitae, et velit quae veritatis ducimus iure corrupti, soluta, maxime aperiam suscipit quaerat. Explicabo, pariatur. Totam, esse? </p><hr><p class="paragraph tac">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed corrupti corporis, natus veritatis laudantium quam debitis possimus tempora animi ratione, dolore distinctio eos dolorem minus neque necessitatibus aliquid voluptates. A?</p>
+                <p class="taj paragraph lh2">L’interno del locale è stato recentemente ristrutturato riportando alla luce gli antichi mattoni dell’800 che, con uno sguardo al passato e un tocco di modernità, rendono l’ambiente caldo e piacevole.</p>
+                <hr>
+                <p class="paragraph taj">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed corrupti corporis, natus veritatis laudantium quam debitis possimus tempora animi ratione, dolore distinctio eos dolorem minus neque necessitatibus aliquid voluptates. A?</p>
             </div>
         </div>
     </section>
@@ -115,6 +166,6 @@
 </body>
 <!-- link agli script -->
 <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
-<script src="js/lottie.js"></script>
+<script src="node_modules/flatpickr/dist/flatpickr.min.js"></script>
 <script src="js/index.js"></script>
 </html>
