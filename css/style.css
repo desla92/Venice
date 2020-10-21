@@ -891,7 +891,7 @@ footer .footerSubTitle{
         margin: 0 auto;
         margin-top: 100px;
         border-bottom: 12px solid #ffffff;
-        width: 60%;
+        width: 80%;
     }
     .normalMargin{
         margin-top: 0;
@@ -943,6 +943,10 @@ footer .footerSubTitle{
     }
     .dropdown-content-opened{
         width: 100px;
+    }
+    .secondBannerContact{
+        border-left: 12px solid white;
+        border-right: 12px solid white;
     }
 }
 
